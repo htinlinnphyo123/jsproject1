@@ -1,0 +1,155 @@
+*{
+    box-sizing:border-box;
+}
+:root{
+    --primary-color:#1d0f4a;
+    --secondary-color:#a316c9;
+}
+body{
+    margin:0;
+    font-family:"Times New Roman";
+}
+body.active{
+    transform:translateX(205px);
+    transition:all 0.5s ease;
+}
+nav{
+    background:var(--primary-color);
+    color:#fff;
+    width:200px;
+    height:100%;
+    border-right:2px solid rgba(0,0,0,0.5);
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    transform:translateX(-205px);
+}
+nav .logo img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+}
+nav .logo{
+    padding:30px 0;
+    text-align:center;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+nav ul li{
+    border-bottom :2px solid rgba(200,200,200,0.1);
+    padding:20px;
+}
+nav ul li:first-of-type{
+    border-top:2px solid rgba(200,200,200,0.1);
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+nav ul li a:hover{
+    text-decoration:underline;
+}
+header{
+    background-color:var(--primary-color);
+    color:#fff;
+    font-size:130%;
+    padding:40px 15px;
+    text-align:center;
+    position:relative;
+}
+.toggle{
+    background-color:rgba(0,0,0,0.3);
+    border:0;
+
+    position:absolute;
+    left:20px;
+    top:20px;
+}
+.toggle:focus{
+    outline:0;
+}
+header h1{
+    margin:0;
+}
+header p{
+    margin:30px 0;
+}
+button,input[type="submit"]{
+    background-color:var(--secondary-color);
+    border-radius:5px;
+    color:#fff;
+    cursor:pointer;
+    padding:8px 12px;
+    border:0;
+}
+.btn{
+    font-size:20px;
+    padding:12px 30px;
+}
+.btn:focus{
+    outline:0;
+}
+.container{
+    max-width:800px;
+    margin:0 auto;
+    padding:15px;
+}
+.modal-container{
+    background-color:rgba(0,0,0,0.6);
+    display:none;
+
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.modal-container.showmodal{
+    display:block;
+}
+.modal{
+    width:400px;
+    background-color:#fff;
+    border-radius:5px;
+    box-shadow:5px 3px 10px rgba(0,0,0,0.3);
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50% ,-50%);
+    overflow:hidden;
+}
+.close-btn{
+    background:transparent;
+    font-size:25px;
+    border:none;
+
+    position:absolute;
+    right:0;
+    top:0;
+}
+.modal .modal-header{
+    background:var(--primary-color);
+    color:#fff;
+    padding:15px;
+}
+.modal .modal-content{
+    padding:20px;
+}
+
+.modal-form .form-group{
+    margin:15px 0;
+}
+.modal-form label{
+    display:block;
+    margin-bottom:5px;
+}
+.modal-form .form-input{
+    width:100%;
+    padding:8px;
+}
